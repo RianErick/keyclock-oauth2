@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*") //Corss
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/livros")
 public class LivroController {
 
     private final LivroService livroService;
