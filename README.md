@@ -1,14 +1,14 @@
 # POC Spring Boot Backend
 
-Este é um projeto Spring Boot que demonstra a integração com o AWS Cognito e utiliza a biblioteca Vavr Funcional para implementar boas práticas de programação funcional.
+Este é um projeto Spring Boot que demonstra a integração com o Keyclock com Auth2 + JWT  e utiliza a biblioteca Vavr Funcional para implementar boas práticas de programação funcional.
 
 ## Descrição
 
-Este projeto é uma Prova de Conceito (POC) que ilustra como construir um backend robusto em Spring Boot com recursos de autenticação e autorização fornecidos pelo AWS Cognito. Além disso, utiliza a biblioteca Vavr Funcional para promover práticas de programação funcional no código.
+Este projeto é uma Prova de Conceito (POC) que ilustra como construir um backend robusto em Spring Boot com recursos de autenticação e autorização fornecidos pelo Keyclock. Além disso, utiliza a biblioteca Vavr Funcional para promover práticas de programação funcional no código.
 
 ## Funcionalidades
 
-- **AWS Cognito**: O AWS Cognito é integrado ao projeto para fornecer autenticação e autorização de usuários de maneira segura.
+- **Keyclock**: O Keyclock é integrado ao projeto para fornecer autenticação e autorização de usuários de maneira segura.
 
 - **Boas Práticas de Programação Funcional**: A biblioteca Vavr Funcional é usada para promover a programação funcional, tornando o código mais conciso e legível.
 
