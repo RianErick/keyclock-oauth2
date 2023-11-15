@@ -64,6 +64,4 @@ public class TesteLivroService {
         List<Livro> livros = livroService.listarLivros();
         Assertions.assertThat(livros.size()).isEqualTo(5L);
     }
-
-
 }
