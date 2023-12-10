@@ -1,6 +1,6 @@
 # POC Spring Boot Backend
 
-Este é um projeto Spring Boot que demonstra a integração com o Keyclock com Auth2 + JWT  e utiliza a biblioteca Vavr Funcional para implementar boas práticas de programação funcional.
+Este é um projeto Spring Boot que demonstra a integração com o Keyclock com OAuth2 + JWT  e utiliza a biblioteca Vavr Funcional para implementar boas práticas de programação funcional.
 
 ## Descrição
 
