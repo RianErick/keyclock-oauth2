@@ -1,43 +1,46 @@
 package com.crud.rian.crud.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+import java.util.Set;
+
 @Entity
 @Data
-@NoArgsConstructor
-@Table(name = "livro")
+@Table(name = "autor")
 @Builder
 @AllArgsConstructor
-public class Livro {
+@NoArgsConstructor
+public class Autor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonBackReference
-    @ManyToOne
-    @JoinColumn(name = "id_autor")
-    private Autor autor;
-
-    @Size(min = 3 , max = 255)
+    @Column
     @NotBlank
     private String nome;
 
-    @NotBlank
-    @Column(name = "capa_url")
-    private String capaUrl;
-
-    public Livro(Autor autor, String nome , String capaUrl) {
-        this.autor = autor;
+    public Autor(String nome, List<Livro> livroSet, Integer quantidadeLivro) {
         this.nome = nome;
-        this.capaUrl = capaUrl;
+        this.livros = livroSet;
+    }
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "autor",
+            fetch = FetchType.LAZY)
+    List<Livro> livros;
+
+    public Autor(String nome) {
+        this.nome = nome;
     }
 }

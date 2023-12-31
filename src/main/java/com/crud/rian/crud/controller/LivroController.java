@@ -19,7 +19,7 @@ public class LivroController {
         this.livroService = livroService;
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('USER') or hasRole('ADMIN')" )
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public Livro adicionarLivro(@RequestBody Livro livro) {
